@@ -1,5 +1,5 @@
 # SEA_rover_teleoperation_trial2
-
+for running code: https://youtu.be/j2sz4GtTVQs
 #Interfaz local (por el momento)
 <img width="1894" height="907" alt="image" src="https://github.com/user-attachments/assets/c82d3e54-2731-4404-bce4-841fe0464ef3" />
 
