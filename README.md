@@ -102,28 +102,24 @@ ls -l /dev/ttyACM* /dev/ttyUSB*
 
 
 
-# ////////////////////EXPLICACION A DETALLE////////////////////
+# ////////////////////EXPLICACIÓN MAS A DETALLE////////////////////
 
-# 🚀 ROS2 + micro-ROS Rover System  
-**STM32L432KC + Raspberry Pi 4 + Web Teleoperation + USB Camera**
 
 ---
 
-# 📌 Project Overview
-
 This project integrates:
 
-- 🧠 **STM32L432KC** running micro-ROS (motor control + encoder acquisition)
-- 🐧 **Raspberry Pi 4 (Ubuntu + ROS 2 Humble)**
-- 🌐 Web-based control interface (virtual joystick + telemetry)
-- 📷 USB webcam live streaming
-- 📍 Differential-drive odometry
+-  **STM32L432KC** running micro-ROS (motor control + encoder acquisition)
+-  **Raspberry Pi 4 (Ubuntu + ROS 2 Humble)** (pero el hecho que se copie solamente los codigos de los nodos en los  compilables creados localmente desde cualquier version de ros2 sirve)
+-  Web-based control interface (virtual joystick + telemetry)
+-  USB webcam live streaming
+-  Differential-drive odometry
 
 The rover can be controlled entirely from a browser while streaming real-time telemetry and video.
 
 ---
 
-# 🧠 System Architecture
+# System Architecture
 
 ```
 ┌────────────────────────────┐
@@ -160,7 +156,7 @@ The rover can be controlled entirely from a browser while streaming real-time te
 
 ---
 
-# 🏗 Workspace Structure
+#  Workspace Structure
 
 ```
 ros2_ws/
@@ -174,7 +170,7 @@ ros2_ws/
 ```
 
 ---
-
+# La forma en la que se crearon los nodos fue de la siguiente manera
 # 🛠 STEP 1 — Create ROS2 Workspace
 
 ```bash
