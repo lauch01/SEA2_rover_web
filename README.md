@@ -76,8 +76,9 @@ En STM32L432KC se usó:
 
 > Si el Serial Monitor muestra bytes raros a 115200: es XRCE binario, es correcto.
 
----
 
+
+---
 ## 4) Raspberry Pi: conectar STM32 y detectar puerto serial
 
 Conecta el STM32 por USB a la Raspberry.
@@ -85,6 +86,7 @@ Conecta el STM32 por USB a la Raspberry.
 ### 4.1 Identificar el dispositivo
 ```bash
 ls -l /dev/ttyACM* /dev/ttyUSB*
+```
 
 
 
