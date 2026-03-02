@@ -1,4 +1,15 @@
 # SEA2_rover_web
+
+#Interfaz local (por el momento)
+<img width="1894" height="907" alt="image" src="https://github.com/user-attachments/assets/c82d3e54-2731-4404-bce4-841fe0464ef3" />
+
+#Conexion y prototipo del autito en prueba
+
+<img width="1894" height="907" alt="image" src="https://github.com/user-attachments/assets/dde868c5-744a-4d63-90f7-0b1cca1177e3" />
+
+
+
+
 # Rover Web Teleoperation + micro-ROS (STM32L432KC + RPi4 + ROS2 Humble)
 
 Este repositorio/documentación describe **paso a paso** cómo levantar un rover (TI-RSLK/Pololu) con:
