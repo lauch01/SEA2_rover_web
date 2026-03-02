@@ -89,8 +89,7 @@ ls -l /dev/ttyACM* /dev/ttyUSB*
 
 
 
-###########3
-EXPLICACION A DETALLE :
+# ////////////////////EXPLICACION A DETALLE////////////////////
 
 # 🚀 ROS2 + micro-ROS Rover System  
 **STM32L432KC + Raspberry Pi 4 + Web Teleoperation + USB Camera**
