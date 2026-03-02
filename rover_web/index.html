@@ -1,0 +1,119 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Rover Control</title>
+
+  <link rel="stylesheet" href="styles.css" />
+</head>
+
+<body>
+  <div class="wrap">
+    <header>
+      <div>
+        <h1>Rover Control Panel</h1>
+        <div class="sub">Laptop horizontal · cámara grande · joystick + telemetría · suelta = STOP</div>
+      </div>
+      <div class="pill"><span id="dot" class="dot"></span> ROS: <span id="status">connecting...</span></div>
+      <div class="pill">rosbridge: <b id="wsurl">-</b></div>
+    </header>
+
+    <div class="main">
+      <!-- ===== Column 1: Camera ===== -->
+      <div class="card">
+        <div class="sectionTitle">Camera</div>
+        <div class="camWrap">
+          <img id="cam" class="cam"
+            src="http://192.168.0.42:8080/?action=stream"
+            alt="Rover camera stream"
+          />
+        </div>
+      </div>
+
+      <!-- ===== Column 2: Control ===== -->
+      <div class="card">
+        <div class="sectionTitle">Control</div>
+
+        <div class="controls">
+          <div id="joy" class="joystickBox">
+            <div class="joystickHint">Arrastra · suelta = STOP</div>
+          </div>
+
+          <div>
+            <div class="btnGrid">
+              <div></div>
+              <button id="btnF">↑</button>
+              <div></div>
+
+              <button id="btnL">⟲</button>
+              <button id="btnStop" class="stop">STOP</button>
+              <button id="btnR">⟳</button>
+
+              <div></div>
+              <button id="btnB">↓</button>
+              <div></div>
+            </div>
+
+            <div class="btnRow">
+              <button id="btnReset" class="reset">Reset Odom</button>
+            </div>
+
+            <div class="small">
+              Botones: mover solo mientras mantienes presionado.<br/>
+              Joystick: publica /cmd_vel a Hz configurado.
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- ===== Column 3: Telemetry + Sliders ===== -->
+      <div class="card">
+        <div class="split">
+          <div class="telemetry">
+            <div class="sectionTitle">Telemetría</div>
+            <div class="kv"><span>left_ticks</span><b id="lt">-</b></div>
+            <div class="kv"><span>right_ticks</span><b id="rt">-</b></div>
+            <div class="kv"><span>distance (m)</span><b id="dist">-</b></div>
+            <hr>
+            <div class="kv"><span>x (m)</span><b id="x">-</b></div>
+            <div class="kv"><span>y (m)</span><b id="y">-</b></div>
+            <div class="kv"><span>yaw (rad)</span><b id="yaw">-</b></div>
+            <div class="kv"><span>v (m/s)</span><b id="v">-</b></div>
+            <div class="kv"><span>w (rad/s)</span><b id="w">-</b></div>
+          </div>
+
+          <div class="sliders">
+            <div class="sectionTitle">Escalas</div>
+
+            <div class="sliderRow">
+              <div class="kv"><span>Vel máx (m/s)</span><b><span id="vmaxLabel">0.35</span></b></div>
+              <input id="vmax" type="range" min="0.05" max="0.80" value="0.35" step="0.01">
+              <div class="small">Limita linear.x</div>
+            </div>
+
+            <div class="sliderRow">
+              <div class="kv"><span>Giro máx (rad/s)</span><b><span id="wmaxLabel">1.50</span></b></div>
+              <input id="wmax" type="range" min="0.2" max="4.0" value="1.50" step="0.05">
+              <div class="small">Limita angular.z</div>
+            </div>
+
+            <div class="sliderRow">
+              <div class="kv"><span>Publicación (Hz)</span><b><span id="hzLabel">20</span></b></div>
+              <input id="hz" type="range" min="5" max="40" value="20" step="1">
+              <div class="small">Frecuencia de /cmd_vel</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div><!-- main -->
+  </div><!-- wrap -->
+
+  <!-- libs -->
+  <script src="https://cdn.jsdelivr.net/npm/roslib/build/roslib.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/nipplejs@0.10.1/dist/nipplejs.min.js"></script>
+
+  <!-- app -->
+  <script src="app.js"></script>
+</body>
+</html>
