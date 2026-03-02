@@ -1,11 +1,11 @@
-# SEA2_rover_web
+# SEA_rover_teleoperation_trial2
 
 #Interfaz local (por el momento)
 <img width="1894" height="907" alt="image" src="https://github.com/user-attachments/assets/c82d3e54-2731-4404-bce4-841fe0464ef3" />
 
 #Conexion y prototipo del autito en prueba
 
-<img width="1894" height="907" alt="image" src="https://github.com/user-attachments/assets/dde868c5-744a-4d63-90f7-0b1cca1177e3" />
+![WhatsApp Image 2026-03-01 at 23 43 50](https://github.com/user-attachments/assets/682e99ac-7a57-4249-bdcb-5415c67d6a4e)
 
 
 
